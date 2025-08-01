@@ -49,18 +49,19 @@ With BLE scanner name "BR", service "0x27a5" (pressure psi) and manufacturer dat
 |PPPP|(absolute) pressure 1/10 psi|
 |CCCC|checksum|
 
-Status byte SS: ARSB2H1y
+Status byte SS: PARSB2H1y
 
-|bit|content|
-|--:|-------|
-|A|alarm zero pressure|
-|R|rotating|
-|S|standing still for about 15min|
-|B|begin rotating|
-|2|decreasing pressure below 20.7 psi|
-|H|rising pressure|
-|1|decreasing pressure above 20.7 psi|
-|y|unknown|
+|bit|content|decimal|binary|
+|--:|-------|---|---------|
+|P|parked/not moving|80|0101 0000|
+|A|alarm zero pressure|65|0100 0001|
+|R|rotating|82|0101 0010|
+|S|standing still for about 15min|83|0101 0011|
+|B|begin rotating|66|0100 0010|
+|2|decreasing pressure below 20.7 psi|50|0011 0010|
+|H|rising pressure|72|0100 1000|
+|1|decreasing pressure above 20.7 psi|49|0011 0001|
+|y|unknown|121|0111 1001|
 
 Once pressurized they transmit when pressure changes and any couple of minutes. Rotation of a bicycle wheel corresponding to about 4 to 8 km/h speed triggered more frequent transmissions.
 
