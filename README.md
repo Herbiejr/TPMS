@@ -69,3 +69,6 @@ BLE Advertising Data Payload: Short UUID (16 bit) "0x27a5" (byte 0 to 3, length 
 Sensor data could be received with ESP32 and BLE library.
 
 Two versions to receive BLE data with python are submitted: one based on bluepy library, one based on bleak library. (I need to receive sensor data with my PinePhone, where both examples work.) Issues are: With the bleak example sometimes multiple (including old) data are received. Drawback of bluepy example is that it needs sudo to run. (See https://pypi.org/project/bluepy/ and https://pypi.org/project/bleak/ for details.)
+
+
+YouTube video of testing https://www.youtube.com/watch?v=P85tkCbQGo8
